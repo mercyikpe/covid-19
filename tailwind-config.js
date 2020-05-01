@@ -2,17 +2,27 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        green: "#1cb142",
         pink: "#f9345e",
-        red: "#F42850",
         yellow: "#FECE00",
-        indigo: {
+        // white: {
+        //   lighter: "#EBEDFA",
+        // },
+	      indigo: {
           lighter: "#8B9FFF",
           light: "#5268E7",
           default: "#6237ff",
           dark: "#1a1053"
         },
+        red: {
+          light: "#F76380",
+          dark: "#F42850"
+        },
+        green: {
+          light: "#5BC776",
+          dark: "#1cb142"
+        },
         blue: {
+          light: "#4C76E1",
           dark: "#0841D5"
         },
         orange: {

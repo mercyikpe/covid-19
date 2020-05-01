@@ -16,7 +16,9 @@
       <div class="flex justify-between items-center mt-12 -mx-2">
         <div class="w-1/3">
           <div class="text-left text-white">
-            <h6 class="uppercase font-extrabold text-lg">188+ Countries Are Affected By</h6>
+            <h6 class="uppercase font-extrabold text-lg">
+              188+ Countries Are Affected By
+            </h6>
             <h1 class="font-extrabold text-6xl">CORONA</h1>
             <p class="mt-6 mr-16">
               The Virus was first reported in wuhan, Hubel china on 17 November
@@ -24,7 +26,9 @@
               Declared the outbreak a pandmic.
             </p>
 
-            <h3 class="text-orange-lighter font-extrabold my-8">ABOUT COVID-19</h3>
+            <h3 class="text-orange-lighter font-extrabold my-8">
+              ABOUT COVID-19
+            </h3>
           </div>
         </div>
 
@@ -32,7 +36,71 @@
           <img src="../assets/images/banner-img.svg" alt="" />
         </div>
       </div>
-    </div>
+
+      <!--		Stats session-->
+      <div class="px-4 md:px-10 mx-auto w-full pt-20">
+        <div>
+          <div class="flex flex-wrap">
+            <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white rounded text-white mb-6 xl:mb-0 shadow-lg bg-red-light"
+              >
+                <div class="flex-auto p-8 bg-red-dark rounded m-1">
+                  <h2 class="font-semibold text-4xl font-extrabold">
+                    3,17,309+
+                  </h2>
+                  <p class="mt-2 capitalize">
+                    Total virus cases
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white rounded text-white mb-6 xl:mb-0 shadow-lg bg-blue-light"
+              >
+                <div class="flex-auto p-8 bg-blue-dark rounded m-1">
+                  <h2 class="font-semibold text-4xl font-extrabold">13,643+</h2>
+                  <p class="mt-2 capitalize">
+                    Total death
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+              <div
+                class="relative flex flex-col min-w-0 break-words rounded text-white mb-6 xl:mb-0 shadow-lg bg-green-light"
+              >
+                <div class="flex-auto p-8 bg-green-dark rounded m-1">
+                  <h2 class="font-semibold text-4xl font-extrabold">96,010+</h2>
+                  <p class="mt-2 capitalize">
+                    Total recovered
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+              <div
+                class="relative flex flex-col min-w-0 break-words text-white rounded mb-6 xl:mb-0"
+              >
+                <div class="flex-auto p-4">
+                  <div class="flex items-center">
+					  <div class="relative w-auto pl-4 flex-initial">
+						  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z" fill="#FF3E3E"/></svg>
+					  </div>
+					  <h5 class="ml-2 uppercase text-2xl font-extrabold">LIVE UPDATE</h5>
+                  </div>
+                  <p class="text-2xl mt-4 italic">Canada closes border</p>
+					<p class="text-white-lighter mt-3">If you have a serious underlying health condition, stay home and away from others.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+	</div>
   </div>
 </template>
 
