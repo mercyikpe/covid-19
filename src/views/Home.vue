@@ -1,6 +1,6 @@
 <template>
   <main class="container-fluid mx-auto h-full bg-indigo-light">
-    <section class="container mx-auto">
+    <section class="container mx-auto px-8 lg:px-0">
       <nav class="flex justify-between pt-4">
         <div class="text-gray-700 text-center py-4 m-2">
           <img alt="women logo" src="../assets/images/COVID-19.svg" />
@@ -13,13 +13,17 @@
       </nav>
 
       <!--	banner section  -->
-      <div class="flex justify-between items-center mt-12 -mx-2">
-        <div class="w-1/3">
+      <div class="flex flex-wrap lg:justify-between items-center mt-12 -mx-2">
+        <div class="w-full lg:w-1/2 xl:w-1/3">
           <div class="text-left text-white">
             <h6 class="uppercase font-extrabold text-lg">
               188+ Countries Are Affected By
             </h6>
-            <h1 class="font-extrabold text-tenxl">CORONA</h1>
+            <h1
+              class="font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-tenxl"
+            >
+              CORONA
+            </h1>
             <p>
               The Virus was first reported in wuhan, Hubel china on 17 November
               2019, and on 11 March 2020,the world healtch organization (WHO)
@@ -31,8 +35,14 @@
           </div>
         </div>
 
-        <div class="w-1/2">
-          <img src="../assets/images/banner-img.svg" alt="" />
+        <div
+          class="w-full lg:w-1/2 xl:w-1/2 order-first lg:order-last mb-12 lg:mb-0"
+        >
+          <img
+            class="w-full"
+            src="../assets/images/banner-img.svg"
+            alt="banner"
+          />
         </div>
       </div>
 
@@ -83,8 +93,8 @@
                 class="relative flex flex-col min-w-0 break-words text-white rounded mb-6 xl:mb-0"
               >
                 <div class="flex-auto p-4">
-                  <div class="flex items-center">
-                    <div class="relative w-auto pl-4 flex-initial">
+                  <div class="flex items-center justify-center">
+                    <span class="relative w-auto pl-4 flex-initial">
                       <svg
                         width="20"
                         height="20"
@@ -98,7 +108,7 @@
                           fill="#FF3E3E"
                         />
                       </svg>
-                    </div>
+                    </span>
                     <h5 class="ml-2 uppercase text-2xl font-extrabold">
                       LIVE UPDATE
                     </h5>
@@ -117,37 +127,39 @@
     </section>
 
     <section
-      class="mr-56 bg-blue-darker text-white py-32 mt-48 border-r-8 border-white"
+      class="mr-12 md:mr-16 xl:mr-56 bg-blue-darker text-white py-32 mt-48 border-r-8 border-white"
     >
-      <div class="mx-16">
-        <h2 class="px-8 text-left font-extrabold text-5xl">
+      <div class="mx-4 xl:mx-16">
+        <h2
+          class="px-8 text-left font-extrabold text-3xl md:text-4xl xl:text-5xl"
+        >
           How To Safe Your Life?
         </h2>
         <div class="flex flex-wrap mt-24">
-          <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+          <div class="w-full sm:w-1/2 lg:w-6/12 xl:w-3/12 px-6 xl:px-8">
             <img src="../assets/images/wash-hand.svg" alt="wash-hand" />
           </div>
-          <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+          <div class="w-full sm:w-1/2 lg:w-6/12 xl:w-3/12 px-8">
             <img src="../assets/images/use-mask.svg" alt="use-mask" />
           </div>
-          <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+          <div class="w-full sm:w-1/2 lg:w-6/12 xl:w-3/12 px-8">
             <img
               src="../assets/images/human-contact.svg"
               alt="avoid-human-contact"
             />
           </div>
-          <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+          <div class="w-full sm:w-1/2 lg:w-6/12 xl:w-3/12 px-8">
             <img src="../assets/images/gathering.svg" alt="avoid-gathering" />
           </div>
         </div>
-        <div class="flex justify-around mt-24">
-          <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+        <div class="flex flex-wrap justify-around mt-24">
+          <div class="w-full sm:w-1/2 lg:w-6/12 xl:w-3/12 px-8">
             <img src="../assets/images/animal.svg" alt="avoid-animal" />
           </div>
-          <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+          <div class="w-full sm:w-1/2 lg:w-6/12 xl:w-3/12 px-8">
             <img src="../assets/images/distance.svg" alt="keep distance" />
           </div>
-          <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
+          <div class="w-full sm:w-1/2 lg:w-6/12 xl:w-3/12 px-8">
             <img src="../assets/images/cookwell.svg" alt="cook-well" />
           </div>
         </div>
@@ -155,47 +167,47 @@
     </section>
 
     <!--	  symptoms section-->
-    <section class="container mx-auto text-white py-32 mt-48">
-      <h2 class="font-extrabold text-5xl text-right">
+    <section class="container mx-auto text-white py-32 mt-48 px-8">
+      <h2 class="font-extrabold text-3xl md:text-4xl lg:text-5xl text-right">
         Symptoms of COVID-19
       </h2>
       <div class="flex justify-between mt-16 items-center">
-        <div class="w-1/5">
+        <div class="w-1/4">
           <div class="flex flex-col items-start">
             <button
-              class="capitalize text-xl bg-transparent py-4 w-40 rounded border-2 border-blue-lighter bg-blue"
+              class="capitalize text-lg lg:text-xl bg-transparent py-4 w-24 md:w-32 lg:w-40 rounded border-2 border-blue-lighter bg-blue"
             >
               headache
             </button>
             <button
-              class="my-12 capitalize text-xl bg-transparent py-4 w-40 rounded border-2 border-blue-lighter bg-blue"
+              class="my-12 capitalize text-lg lg:text-xl bg-transparent py-4 w-24 md:w-32 lg:w-40 rounded border-2 border-blue-lighter bg-blue"
             >
               cough
             </button>
             <button
-              class="capitalize text-xl bg-transparent py-4 w-40 rounded border-2 border-blue-lighter bg-blue"
+              class="capitalize text-lg lg:text-xl bg-transparent py-4 w-24 md:w-32 lg:w-40 rounded border-2 border-blue-lighter bg-blue"
             >
               fever
             </button>
           </div>
         </div>
-        <div class="w-3/5 flex justify-center bg-gray-200">
+        <div class="w-2/4 flex justify-center bg-gray-200">
           <img src="../assets/images/symptoms.svg" alt="symptoms" />
         </div>
-        <div class="w-1/5">
+        <div class="w-1/4">
           <div class="flex flex-col items-end">
             <button
-              class="capitalize text-xl bg-transparent py-4 w-40 rounded border-2 border-blue-lighter bg-blue"
+              class="capitalize text-lg lg:text-xl bg-transparent py-4  w-24 md:w-32 lg:w-40 rounded border-2 border-blue-lighter bg-blue"
             >
               Dyspnoea
             </button>
             <button
-              class="my-12 capitalize text-xl bg-transparent py-4 w-40 rounded border-2 border-blue-lighter bg-blue"
+              class="my-12 capitalize text-lg lg:text-xl bg-transparent py-4 w-24 md:w-32 lg:w-40 rounded border-2 border-blue-lighter bg-blue"
             >
               Muscle pain
             </button>
             <button
-              class="capitalize text-xl bg-transparent py-4 w-40 rounded border-2 border-blue-lighter bg-blue"
+              class="capitalize text-lg lg:text-xl bg-transparent py-4 w-24 md:w-32 lg:w-40 rounded border-2 border-blue-lighter bg-blue"
             >
               Chest pain
             </button>
@@ -206,7 +218,9 @@
 
     <!--	  newsletter section-->
     <section class="container mx-auto px-6 text-center py-20 text-white">
-      <h2 class="mb-2 text-5xl font-bold text-center text-white">
+      <h2
+        class="mb-2 text-3xl md:text-4xl text-5xl font-bold text-center text-white"
+      >
         Are You Affected By Corona?
       </h2>
       <p>
@@ -214,7 +228,7 @@
         peoples
       </p>
       <div class="flex justify-center mt-12">
-        <div class="rounded-lg w-2/4 bg-blue py-8 px-4">
+        <div class="rounded-lg w-3/4 lg:2/4 bg-blue py-8 px-4">
           <div
             class="flex flex-wrap justify-between md:flex-row border-b-2 border-white pb-4 px-4"
           >
@@ -246,7 +260,7 @@
     <section class="container mx-auto pt-20 pb-10">
       <div class="px-4">
         <div class="block md:flex justify-between items-center md:-mx-2">
-          <div>
+          <div class="hidden lg:block">
             <button class="">
               <svg
                 width="51"
@@ -315,7 +329,7 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0 hover:shadow-xl">
+          <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0 hover:shadow-xl mt-6 lg:mt-0">
             <div class="bg-white rounded-lg overflow-hidden shadow relative">
               <img
                 class="h-56 w-full object-cover object-center"
@@ -358,8 +372,37 @@
               </div>
             </div>
           </div>
-          <div>
-            <button class="p-5 bg-orange rounded-full">
+          <div class="flex justify-center">
+            <button class="">
+              <svg
+                width="51"
+                height="52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M25 1C11.193 1 0 12.193 0 26s11.193 25 25 25 25-11.193 25-25S38.807 1 25 1z"
+                  fill="#3E54D2"
+                  stroke="#6D84FC"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M25 1C11.193 1 0 12.193 0 26s11.193 25 25 25 25-11.193 25-25S38.807 1 25 1z"
+                  fill="#3E54D2"
+                  stroke="#FECE00"
+                  stroke-dasharray="110 180"
+                />
+                <path
+                  d="M27 33.414l-6.707-6.707a1 1 0 010-1.414L27 18.586 28.414 20l-6 6 6 6L27 33.414z"
+                  fill="#FF7033"
+                />
+              </svg>
+            </button>
+
+            <button class="ml-16 lg:ml-0 p-5 bg-orange rounded-full">
               <svg
                 width="9"
                 height="16"
@@ -380,12 +423,12 @@
     <!--	Footer  -->
     <footer class="block py-4 mt-12">
       <div class="container mx-auto px-4">
-        <hr class="mb-4 border-b-2 border-blue-dark" />
+        <hr class="mb-4 border-b-1 border-blue-lighter" />
         <div
           class="flex flex-wrap items-center md:justify-between justify-center"
         >
           <div class="w-full md:w-4/12 px-4">
-            <div class="text-sm text-gray-600 py-1">
+            <div class="text-sm text-white py-1">
               Developed <span class="text-yellow">Mercy Ikpe</span> | Design
               <span class="text-yellow">Pixency</span>
             </div>
