@@ -1,13 +1,16 @@
 module.exports = {
   theme: {
     extend: {
+	    fontSize: {
+        tenxl: "6.875rem"
+      },
       colors: {
         pink: "#f9345e",
         yellow: "#FECE00",
         // white: {
         //   lighter: "#EBEDFA",
         // },
-	      indigo: {
+        indigo: {
           lighter: "#8B9FFF",
           light: "#5268E7",
           default: "#6237ff",
@@ -34,12 +37,8 @@ module.exports = {
           default: "#FF7033"
         },
         gray: {
-          lighter: "#817c93"
+          default: "#817c93"
         }
-      },
-      fontsize: {
-        "7xl": "6.875rem",
-	      'tiny': '.275rem',
       }
     }
   },

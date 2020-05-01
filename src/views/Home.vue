@@ -1,6 +1,6 @@
 <template>
-  <div class="container-fluid mx-auto h-full bg-indigo-light">
-    <div class="container mx-auto">
+  <main class="container-fluid mx-auto h-full bg-indigo-light">
+    <section class="container mx-auto">
       <nav class="flex justify-between pt-4">
         <div class="text-gray-700 text-center py-4 m-2">
           <img alt="women logo" src="../assets/images/COVID-19.svg" />
@@ -19,13 +19,12 @@
             <h6 class="uppercase font-extrabold text-lg">
               188+ Countries Are Affected By
             </h6>
-            <h1 class="font-extrabold text-6xl">CORONA</h1>
-            <p class="mt-6 mr-16">
+            <h1 class="font-extrabold text-tenxl">CORONA</h1>
+            <p>
               The Virus was first reported in wuhan, Hubel china on 17 November
               2019, and on 11 March 2020,the world healtch organization (WHO)
               Declared the outbreak a pandmic.
             </p>
-
             <h3 class="text-orange-lighter font-extrabold my-8">
               ABOUT COVID-19
             </h3>
@@ -115,9 +114,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div
+    <section
       class="mr-56 bg-blue-darker text-white py-32 mt-48 border-r-8 border-white"
     >
       <div class="mx-16">
@@ -153,9 +152,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div
+<!--	  symptoms section-->
+    <section
       class="container mx-auto text-white py-32 mt-48"
     >
       <h2 class="font-extrabold text-5xl text-right">
@@ -206,8 +206,75 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+
+<!--	  newsletter section-->
+		  <section class="container mx-auto px-6 text-center py-20 text-white">
+			  <h2 class="mb-2 text-5xl font-bold text-center text-white">Are You Affected By Corona?</h2>
+			  <p>Don’t worry our doctor will  meet with You. Try to distance from other peoples</p>
+			  <div class="flex justify-center mt-12">
+				  <div class="rounded-lg w-2/4 bg-blue py-8 px-4">
+					  <div class="flex flex-wrap justify-between md:flex-row border-b-2 border-white pb-4 px-4">
+						  <input type="email" class="bg-transparent flex-1 appearance-none placeholder-white text-xl focus:outline-none" placeholder="Enter your email">
+						  <button class="m-1 p-2 rounded-lg font-semibold uppercase lg:w-auto bg-orange rounded-full">
+							  <svg class="h-10 w-10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.356 16.102l5.697 4.347 11.664-5.978c.452-.271.905.453.452.725l-9.132 7.426v12.68c0 .815 1.085 1.268 1.627.543l6.24-7.426 12.387 9.419a.95.95 0 001.447-.544l7.234-36.227c.18-.724-.543-1.268-1.266-.996L.537 14.562c-.633.272-.723 1.177-.18 1.54z" fill="#fff"/></svg>
+						  </button>
+					  </div>
+				  </div>
+			  </div>
+		  </section>
+
+<!--	  News section-->
+	  <section class="container mx-auto pt-20 pb-10">
+		  <div class="px-4">
+			  <div class="block md:flex justify-between items-center md:-mx-2">
+				  <div>
+					  <button class="">
+						  <svg width="51" height="52" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M25 1C11.193 1 0 12.193 0 26s11.193 25 25 25 25-11.193 25-25S38.807 1 25 1z" fill="#3E54D2" stroke="#6D84FC"/><path fill-rule="evenodd" clip-rule="evenodd" d="M25 1C11.193 1 0 12.193 0 26s11.193 25 25 25 25-11.193 25-25S38.807 1 25 1z" fill="#3E54D2" stroke="#FECE00" stroke-dasharray="110 180"/><path d="M27 33.414l-6.707-6.707a1 1 0 010-1.414L27 18.586 28.414 20l-6 6 6 6L27 33.414z" fill="#FF7033"/></svg>
+					  </button>
+				  </div>
+				  <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0 hover:shadow-xl">
+					  <div class="bg-white rounded-lg overflow-hidden shadow relative">
+						  <img class="h-56 w-full object-cover object-center" src="../assets/images/news.svg" alt="news">
+						  <div class="p-4 h-auto md:h-40 lg:h-48">
+							  <a href="#" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+								  Woman standing under blue sky
+							  </a>
+							  <div class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
+								  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde asperiores? Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi quisquam debitis!
+							  </div>
+							  <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+								  <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700" href="#">#something</a>
+								  <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700" href="#">#sky</a>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+				  <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0 hover:shadow-xl">
+					  <div class="bg-white rounded-lg overflow-hidden shadow relative">
+						  <img class="h-56 w-full object-cover object-center" src="../assets/images/news1.svg" alt="news">
+						  <div class="p-4 h-auto md:h-40 lg:h-48">
+							  <a href="#" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+								  Woman walking on pathway
+							  </a>
+							  <div class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
+								  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure aut quia alias ullam eveniet sunt! Ipsa, sunt. Inventore ipsum sit quasi. Alias quasi officiis blanditiis!
+							  </div>
+							  <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+								  <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700" href="#">#pathway</a>
+								  <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700" href="#">#woman</a>
+								  <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700" href="#">#walkalone</a>
+							  </div>
+						  </div>
+					  </div>
+				  </div>
+				  <div>
+					  <button class="p-5 bg-orange rounded-full"><svg width="9" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 15.414L.586 14l6-6-6-6L2 .586l6.707 6.707a.999.999 0 010 1.414L2 15.414z" fill="#fff"/></svg></button>
+				  </div>
+			  </div>
+		  </div>
+	  </section>
+  </main>
 </template>
 
 <script>
