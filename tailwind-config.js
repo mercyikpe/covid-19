@@ -17,11 +17,16 @@ module.exports = {
         },
         orange: {
           light: "#fa6400",
-          lighter: "#FF7033"
+          lighter: "#FF834E",
+          default: "#FF7033"
         },
         gray: {
           lighter: "#817c93"
         }
+      },
+      fontsize: {
+        "7xl": "6.875rem",
+	      'tiny': '.275rem',
       }
     }
   },
