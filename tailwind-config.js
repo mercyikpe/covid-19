@@ -1,13 +1,16 @@
 module.exports = {
   theme: {
     extend: {
+      fontSize: {
+        tenxl: "6.875rem"
+      },
       colors: {
         pink: "#f9345e",
         yellow: "#FECE00",
         // white: {
         //   lighter: "#EBEDFA",
         // },
-	      indigo: {
+        indigo: {
           lighter: "#8B9FFF",
           light: "#5268E7",
           default: "#6237ff",
@@ -23,7 +26,10 @@ module.exports = {
         },
         blue: {
           light: "#4C76E1",
-          dark: "#0841D5"
+          lighter: "#7087FF",
+          default: "#6075EB",
+          dark: "#0841D5",
+          darker: "#3E54D2"
         },
         orange: {
           light: "#fa6400",
@@ -31,12 +37,10 @@ module.exports = {
           default: "#FF7033"
         },
         gray: {
-          lighter: "#817c93"
+          default: "#817c93",
+          light: "rgb(247,251,255)",
+          lighter: "#edf2f7"
         }
-      },
-      fontsize: {
-        "7xl": "6.875rem",
-	      'tiny': '.275rem',
       }
     }
   },

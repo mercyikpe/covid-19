@@ -8,6 +8,17 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "app",
+  data() {
+    return {
+      name: "",
+      position: ""
+    };
+  }
+};
+</script>
 <style>
 #app {
   font-family: "Fira Sans", sans-serif;
