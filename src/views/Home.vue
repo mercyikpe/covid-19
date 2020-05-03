@@ -1,19 +1,28 @@
 <template>
   <main class="container-fluid mx-auto h-full bg-indigo-light">
     <section class="container mx-auto px-8 lg:px-0">
-      <nav class="flex justify-between pt-4">
+      <nav class="flex justify-between pt-6">
         <div class="text-gray-700 text-center py-4 m-2">
           <img alt="women logo" src="../assets/images/COVID-19.svg" />
         </div>
         <div class="text-gray-700 text-center py-4 m-2">
-          <router-link to="/"
-            ><img src="../assets/logo.svg" alt="logo"
-          /></router-link>
+          <router-link to="dashboard">
+            <button
+              data-balloon-length="large"
+              aria-label="Click to view dashboard"
+              data-balloon-pos="down"
+			  class="tooltip-big-text"
+            >
+              <img src="../assets/logo.svg" alt="logo" />
+            </button>
+          </router-link>
         </div>
       </nav>
 
       <!--	banner section  -->
-      <div class="flex flex-wrap lg:justify-between items-center mt-12 -mx-2">
+      <section
+        class="flex flex-wrap lg:justify-between items-center mt-12 -mx-2"
+      >
         <div class="w-full lg:w-1/2 xl:w-1/3">
           <div class="text-left text-white">
             <h6 class="uppercase font-extrabold text-lg">
@@ -44,86 +53,11 @@
             alt="banner"
           />
         </div>
-      </div>
+      </section>
 
-      <!--		Stats session-->
-      <div class="px-4 md:px-10 mx-auto w-full pt-20">
-        <div>
-          <div class="flex flex-wrap">
-            <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white rounded text-white mb-6 xl:mb-0 shadow-lg bg-red-light"
-              >
-                <div class="flex-auto p-8 bg-red-dark rounded m-1">
-                  <h2 class="font-semibold text-4xl font-extrabold">
-                    3,17,309+
-                  </h2>
-                  <p class="mt-2 capitalize">
-                    Total virus cases
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
-              <div
-                class="relative flex flex-col min-w-0 break-words bg-white rounded text-white mb-6 xl:mb-0 shadow-lg bg-blue-light"
-              >
-                <div class="flex-auto p-8 bg-blue-dark rounded m-1">
-                  <h2 class="font-semibold text-4xl font-extrabold">13,643+</h2>
-                  <p class="mt-2 capitalize">
-                    Total death
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full lg:w-6/12 xl:w-3/12 px-8">
-              <div
-                class="relative flex flex-col min-w-0 break-words rounded text-white mb-6 xl:mb-0 shadow-lg bg-green-light"
-              >
-                <div class="flex-auto p-8 bg-green-dark rounded m-1">
-                  <h2 class="font-semibold text-4xl font-extrabold">96,010+</h2>
-                  <p class="mt-2 capitalize">
-                    Total recovered
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-              <div
-                class="relative flex flex-col min-w-0 break-words text-white rounded mb-6 xl:mb-0"
-              >
-                <div class="flex-auto p-4">
-                  <div class="flex items-center justify-center">
-                    <span class="relative w-auto pl-4 flex-initial">
-                      <svg
-                        width="20"
-                        height="20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10z"
-                          fill="#FF3E3E"
-                        />
-                      </svg>
-                    </span>
-                    <h5 class="ml-2 uppercase text-2xl font-extrabold">
-                      LIVE UPDATE
-                    </h5>
-                  </div>
-                  <p class="text-2xl mt-4 italic">Canada closes border</p>
-                  <p class="text-white-lighter mt-3">
-                    If you have a serious underlying health condition, stay home
-                    and away from others.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- HomeStat component -->
+      <HomeStat />
+      <!-- HomeStat component -->
     </section>
 
     <section
@@ -329,7 +263,9 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0 hover:shadow-xl mt-6 lg:mt-0">
+          <div
+            class="w-full lg:w-1/3 md:mx-2 mb-4 md:mb-0 hover:shadow-xl mt-6 lg:mt-0"
+          >
             <div class="bg-white rounded-lg overflow-hidden shadow relative">
               <img
                 class="h-56 w-full object-cover object-center"
@@ -463,10 +399,11 @@
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
 
+import HomeStat from "../components/HomeStat";
 export default {
   name: "Home",
   components: {
-    // HelloWorld
+    HomeStat
   }
 };
 </script>
@@ -477,7 +414,21 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.tooltip-big-text {
+	--balloon-font-size: 1rem;
+}
+button:focus {
+	outline:none;
+	box-shadow: none;
+}
 </style>
 
 <!--https://winstonmhango.com/how-to-create-a-photo-gallery-with-tailwind-css/-->
 <!--https://www.w3schools.com/html/html5_semantic_elements.asp-->
+
+<!--for tooltip https://kazzkiq.github.io/balloon.css/-->
+
+<!--User should be able to view global statistics (cases, deaths, recovered)-->
+<!--User should be able to view a list of statistics per country (cases, deaths, recovered)-->
+<!--User should be able to search for countries-->
+<!--User should be able to rank countries in order-->

@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
     extend: {
-	    fontSize: {
+      fontSize: {
         tenxl: "6.875rem"
       },
       colors: {
@@ -37,7 +37,9 @@ module.exports = {
           default: "#FF7033"
         },
         gray: {
-          default: "#817c93"
+          default: "#817c93",
+          light: "rgb(247,251,255)",
+          lighter: "#edf2f7"
         }
       }
     }
