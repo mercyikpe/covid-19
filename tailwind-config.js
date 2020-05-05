@@ -5,7 +5,6 @@ module.exports = {
         tenxl: "6.875rem"
       },
       colors: {
-        pink: "#f9345e",
         yellow: "#FECE00",
         // white: {
         //   lighter: "#EBEDFA",
@@ -16,7 +15,11 @@ module.exports = {
           default: "#6237ff",
           dark: "#1a1053"
         },
-        red: {
+        pink: {
+          default: "#d53f8c",
+	        dark: "#f9345e"
+        },
+	      red: {
           light: "#F76380",
           dark: "#F42850"
         },

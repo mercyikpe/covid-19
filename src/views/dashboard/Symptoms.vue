@@ -1,15 +1,19 @@
 <template>
-<section>
-	<h2>Symptoms here</h2>
-</section>
+  <section>
+    <DataTable />
+  </section>
 </template>
 
 <script>
-	export default {
-		name: "Symptopms"
-	}
+import DataTable from "../../components/DataTable";
+
+export default {
+  name: "Symptopms",
+  components: {
+    DataTable
+  }
+};
 </script>
 
 <style scoped>
-
 </style>
