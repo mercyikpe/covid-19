@@ -4,21 +4,29 @@
       <div>
         <div class="flex flex-wrap">
           <div class="w-full sm:w-6/12 xl:w-3/12 px-4">
-            <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-4">
-              <div class="relative w-full pr-4 max-w-full flex-grow flex-1 py-4">
+            <div
+              class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-4"
+            >
+              <div
+                class="relative w-full pr-4 max-w-full flex-grow flex-1 py-4"
+              >
                 <h5 class="capitalize font-bold text-sm">
                   New Confirmed
                 </h5>
                 <h2 class="font-semibold text-4xl text-blue">
-                  {{ data.TotalConfirmed | addComma }}
+                  {{ data.NewConfirmed | addComma }}
                 </h2>
               </div>
             </div>
           </div>
 
           <div class="w-full sm:w-6/12 xl:w-3/12 px-4">
-            <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-4">
-              <div class="relative w-full pr-4 max-w-full flex-grow flex-1 py-4">
+            <div
+              class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-4"
+            >
+              <div
+                class="relative w-full pr-4 max-w-full flex-grow flex-1 py-4"
+              >
                 <h5 class="capitalize font-bold text-sm">
                   Total Confirmed
                 </h5>
@@ -30,8 +38,12 @@
           </div>
 
           <div class="w-full sm:w-6/12 xl:w-3/12 px-4">
-            <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-4">
-              <div class="relative w-full pr-4 max-w-full flex-grow flex-1 py-4">
+            <div
+              class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-4"
+            >
+              <div
+                class="relative w-full pr-4 max-w-full flex-grow flex-1 py-4"
+              >
                 <h5 class="capitalize font-bold text-sm">
                   Total Recovered
                 </h5>
@@ -43,8 +55,12 @@
           </div>
 
           <div class="w-full sm:w-6/12 xl:w-3/12 px-4">
-            <div class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-4">
-              <div class="relative w-full pr-4 max-w-full flex-grow flex-1 py-4">
+            <div
+              class="relative flex flex-col min-w-0 break-words bg-white rounded mb-6 xl:mb-0 shadow-lg py-4"
+            >
+              <div
+                class="relative w-full pr-4 max-w-full flex-grow flex-1 py-4"
+              >
                 <h5 class="capitalize font-bold text-sm">
                   Total Deaths
                 </h5>
@@ -86,7 +102,7 @@ export default {
   },
   filters: {
     addComma(value) {
-      return value ? `${value.toLocaleString()}` : "";
+      return value ? `${value.toLocaleString()}` : "0";
     }
   }
 };

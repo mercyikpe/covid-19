@@ -338,7 +338,7 @@
               </svg>
             </button>
 
-            <button class="ml-16 lg:ml-0 p-5 bg-orange rounded-full">
+            <button class="ml-16 lg:ml-0 p-5 bg-orange rounded-full md:hidden">
               <svg
                 width="9"
                 height="16"
@@ -425,6 +425,7 @@ button:focus {
 
 <!--https://winstonmhango.com/how-to-create-a-photo-gallery-with-tailwind-css/-->
 <!--https://www.w3schools.com/html/html5_semantic_elements.asp-->
+<!--http://www.javascriptkit.com/javatutors/arraysort2.shtml-->
 
 <!--for tooltip https://kazzkiq.github.io/balloon.css/-->
 

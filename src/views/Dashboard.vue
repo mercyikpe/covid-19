@@ -1,9 +1,9 @@
 <template>
   <main class="h-full w-full bg-gray-lighter ">
     <div class="flex px-4 md:px-10 mx-auto py-6">
-      <h2 class="text-indigo text-left font-extrabold text-3xl">
+      <router-link to="/" class="text-indigo text-left font-extrabold text-3xl">
         Covid-19
-      </h2>
+      </router-link>
       <h3 class="ml-8 text-black text-left font-medium text-3xl">
         Global Trend
       </h3>
@@ -19,25 +19,13 @@
 </template>
 
 <script>
-// import axios from "axios";
 import GlobalStat from "../components/GlobalStat";
 import CountriesTable from "../components/CountriesTable";
 
 export default {
   name: "Dashboard",
   components: { CountriesTable, GlobalStat }
-  // data: function() {
-  // return {
-  //   data: []
-  // };
 };
-// mounted() {
-//   axios
-//     .get("https://api.covid19api.com/summary")
-//     // .get("https://api.coindesk.com/v1/bpi/currentprice.json")
-//     .then(response => (this.data = response.data));
-// }
-// };
 </script>
 
 <style scoped></style>

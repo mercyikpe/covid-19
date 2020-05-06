@@ -34,16 +34,49 @@
               class="px-6 bg-gray-lighter text-gray-600 align-middle border border-solid border-gray-lighter py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left"
             >
               Confirmed Cases
+              <span @click="sortedTotalDefault()">
+                <svg
+                  class="text-pink w-6 h-6 inline-flex"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5 12a1 1 0 102 0V6.414l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L5 6.414V12zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
+                  ></path>
+                </svg>
+              </span>
             </th>
             <th
               class="px-6 bg-gray-lighter text-gray-600 align-middle border border-solid border-gray-lighter py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left"
             >
               Recovered
+              <span @click="sortedRecoveredDefault()">
+                <svg
+                  class="text-pink w-6 h-6 inline-flex"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5 12a1 1 0 102 0V6.414l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L5 6.414V12zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
+                  ></path>
+                </svg>
+              </span>
             </th>
             <th
               class="px-6 bg-gray-lighter text-gray-600 align-middle border border-solid border-gray-lighter py-3 text-xs uppercase border-l-0 border-r-0 whitespace-no-wrap font-semibold text-left"
             >
               Death
+              <span @click="sortedDeathsDefault()">
+                <svg
+                  class="text-pink w-6 h-6 inline-flex"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M5 12a1 1 0 102 0V6.414l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L5 6.414V12zM15 8a1 1 0 10-2 0v5.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L15 13.586V8z"
+                  ></path>
+                </svg>
+              </span>
             </th>
           </tr>
         </thead>
@@ -61,17 +94,17 @@
             <td
               class="border-t-0 px-6 align-middle text-left border-l-0 border-r-0 text-xs whitespace-no-wrap p-4"
             >
-              {{ Country.TotalConfirmed }}
+              {{ Country.TotalConfirmed | addComma }}
             </td>
             <td
               class="border-t-0 px-6 align-middle text-left border-l-0 border-r-0 text-xs whitespace-no-wrap p-4"
             >
-              {{ Country.TotalRecovered }}
+              {{ Country.TotalRecovered | addComma }}
             </td>
             <td
               class="flex items-center border-t-0 px-6 align-middle text-left border-l-0 border-r-0 text-xs whitespace-no-wrap p-4"
             >
-              {{ Country.TotalDeaths }}
+              {{ Country.TotalDeaths | addComma }}
             </td>
           </tr>
         </tbody>
@@ -89,7 +122,8 @@ export default {
     return {
       data: {},
       loading: true,
-      searchCountry: ""
+      searchCountry: "",
+      sorted: false
     };
   },
   created() {
@@ -103,6 +137,76 @@ export default {
         this.error = true;
       })
       .finally(() => (this.loading = false));
+
+    this.makeRequest();
+  },
+
+  methods: {
+    makeRequest() {
+      axios
+        .get("https://api.covid19api.com/summary")
+        .then(response => {
+          this.data = response.data;
+        })
+        .catch(error => {
+          console.log(error);
+          this.error = true;
+        });
+    },
+    sortedTotalCases() {
+      this.data.Countries.sort(function(a, b) {
+        return b.TotalConfirmed - a.TotalConfirmed;
+      });
+      this.sorted = true;
+    },
+    sortedTotalReverse() {
+      this.data.Countries.sort(function(a, b) {
+        return a.TotalConfirmed - b.TotalConfirmed;
+      });
+      this.sorted = false;
+    },
+    sortedTotalDefault() {
+      this.sorted === false
+        ? this.sortedTotalCases()
+        : this.sortedTotalReverse();
+    },
+    // Recovered sorted
+    sortedRecovered() {
+      this.data.Countries.sort(function(a, b) {
+        return b.TotalRecovered - a.TotalRecovered;
+      });
+      this.sorted = true;
+    },
+    sortedRecoveredReverse() {
+      this.data.Countries.sort(function(a, b) {
+        return a.TotalRecovered - b.TotalRecovered;
+      });
+      this.sorted = false;
+    },
+    sortedRecoveredDefault() {
+      this.sorted === false
+        ? this.sortedRecovered()
+        : this.sortedRecoveredReverse();
+    },
+
+    // Sorted death
+    sortedDeaths() {
+      this.data.Countries.sort(function(a, b) {
+        return b.TotalDeaths - a.TotalDeaths;
+      });
+      this.sorted = true;
+    },
+    sortedDeathsReverse() {
+      this.data.Countries.sort(function(a, b) {
+        return a.TotalDeaths - b.TotalDeaths;
+      });
+      this.sorted = false;
+    },
+    sortedDeathsDefault() {
+      this.sorted === false
+        ? this.sortedDeaths()
+        : this.sortedDeathsReverse();
+    }
   },
   computed: {
     filteredCountries: function() {
@@ -113,7 +217,7 @@ export default {
   },
   filters: {
     addComma(value) {
-      return value ? `${value.toLocaleString()}` : "";
+      return value ? `${value.toLocaleString()}` : "0";
     }
   }
 };
