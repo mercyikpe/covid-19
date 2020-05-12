@@ -1,3 +1,5 @@
+Hosted on netlify: https://covid-19-summary.netlify.app/
+
 # directory
 
 ## Project setup
